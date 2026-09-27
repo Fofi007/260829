@@ -1,0 +1,294 @@
+/*Tarea 3
+  Nombre: Sofia Martinez
+  Fecha: 26/09/2019
+  Descripción: Hub de Recursos Educativos
+
+/* Estilos para la página web */
+/* Ejemplo de uso de estilos */
+/* Selector universal */
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: whitesmoke;
+    
+}
+/* Cargar normalize */
+body {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-size: 16px;
+    background-color:whitesmoke;
+    line-height: 1.6;
+    }
+
+    
+    /* selectores de etiquetas */
+    header{
+    
+       background-color: #0b4b83;
+       display:flex;
+    }
+
+    header img{ 
+        width: 100px;
+        height:auto;
+    }
+
+     h1{ 
+     
+        margin: 20px;
+        font-size: 30px;
+        color: whitesmoke;
+  
+    }
+    hgroup h1{
+        margin-bottom: 2%;
+    }
+
+    header p {
+        margin: 4px 0 0;
+        font-size: 18px;
+        color: whitesmoke;
+        
+    }
+
+
+header nav ul {
+  list-style: none;
+  margin: 32px;
+  padding: 0;
+  display: inline-block;
+  
+}
+
+header nav li {
+  margin-left: 12px;
+  display:inline-block; /* Este css te pone el menú en línea horizontal en vez de ponerlo vertical por default */
+}
+
+header nav a {
+  color: whitesmoke;
+  text-decoration: none;
+} 
+/* Sección del formulario de búsqueda */
+form {
+  padding: 12px;
+  background-color:whitesmoke;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-family:'arial', sans-serif;
+  font-weight: bold;
+}
+
+form input{
+  width: 45%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+
+form button{
+  background-color:darkcyan;
+  color:whitesmoke;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 12px 15px ;
+  cursor: pointer;
+  margin-right: 8%;
+}
+
+/* tarjetas de las secciones*/
+
+main {
+  padding: 20px; 
+}
+
+section{
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+section h2{
+  margin-top:0px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 32px;
+  border-bottom: 3px solid white;
+}
+
+
+figure{
+  margin: 0 0 16px;
+}
+
+figure img{
+  display: block;
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#cursos{
+  background-color: #0b4b83; 
+}
+
+article h3{
+  margin-top: 0%;
+  color: whitesmoke
+}
+
+p{
+  color: whitesmoke;
+}
+
+time{
+  display: block;
+  margin: 0px;
+  color: whitesmoke;
+  font-size: 12px;
+}
+
+a{
+  color: lightgray;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.recurso.destacado{
+  border: 3px solid lightgoldenrodyellow;
+  background-color: #0e2e56;
+}
+
+#lecturas{
+  background-color: #065fa9;
+}
+
+#videos{
+  background-color: #4b99ca;
+}
+#favoritos{
+  background-color: #678baa;
+  
+}
+article{
+  display: inline-block;
+  width: 28%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 3%;
+  border: 1px solid white;
+  padding: 12px;
+  background-color:#7099d0;
+  border-radius: 10px;
+  align-items: center;
+  
+}
+
+aside{
+  margin: 20px;
+  padding: 5%;
+  border-left: 10px solid blue;
+  
+
+}
+
+aside h2{
+  margin-top: 0px;
+  color:whitesmoke;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+details{
+  margin-bottom: 4px;
+  padding: 5px;
+  
+}
+
+#populares{
+  background-color: #22578a;
+
+}
+#faq{
+  background-color: #7099d0;
+}
+
+summary{
+  cursor: pointer;
+  font-weight: bold;
+  color: #0e2e56;
+}
+footer{
+  background-color: #0e2e56;
+  color: azure;
+}
+
+/* =================================================================
+   9. ANIMACIONES - El título de H2 de la sección de cursos debe de aparecer de no verse a verse en 4 segundos. 
+   Las secciones de recursos destacados debe de aparecer en 2 segundos. 
+   ================================================================= */
+  header{
+    animation:aparecer-desde-abajo 2s ease-in
+   }
+
+   @keyframes aparecer-desde-abajo{
+    from {
+      opacity:0;
+      transform:translateY(100px)
+    }
+    to{
+      opacity: 1;
+      transform:translateY(0);
+    }
+   }
+
+header nav a {
+  display: block;        /* para que al seleccionar cada menú se sombrea de un color diferente */
+  padding: .5rem .8rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  background-color: #0e2e56;
+}
+
+
+   #cursos h2 {
+    animation: aparecer 4s ease;
+   }
+
+   @keyframes aparecer {
+  from { opacity: 0; }
+  to   { opacity: 8; }
+}
+
+.recurso.destacado {
+  animation: zoomIn 2s ease;
+  }
+
+  @keyframes zoomIn{
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+  }
+  
+
+
+#favoritos article {
+  transition: transform 0.25s ease;
+}
+
+#favoritos article:hover {
+  transform: translateY(-6px);
+}
+
+form button:active {
+  transform: scale(0.95);
+}
+
